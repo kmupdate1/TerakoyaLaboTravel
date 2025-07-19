@@ -1,7 +1,11 @@
 plugins {
     alias { libs.plugins.kotlin.jvm }
+    alias { libs.plugins.johnrengelman.shadow }
     id("application")
 }
+
+group = "jp.terakoyalabo"
+version = "1.0-dev"
 
 application {
     mainClass.set("jp.terakoyalabo.ApiServiceMainKt")
@@ -23,4 +27,13 @@ dependencies {
     implementation(project(Projects.DOMAIN))
     implementation(project(Projects.APPLICATION))
     implementation(project(Projects.INFRASTRUCTURE))
+}
+
+tasks.shadowJar {
+    manifest {
+        attributes["Main-Class"] = application.mainClass.get()
+    }
+    archiveBaseName.set("service-api-travel")
+    archiveClassifier.set("")
+    archiveVersion.set("")
 }
