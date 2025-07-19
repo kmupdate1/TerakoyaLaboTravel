@@ -45,4 +45,8 @@
         <appender-ref ref="STUDIO" />
         <appender-ref ref="FILE" />
     </logger>
+    <logger name="io.ktor.server.routing" level="TRACE" additivity="false">
+        <appender-ref ref="STUDIO" />
+        <appender-ref ref="FILE" />
+    </logger>
 </configuration>
