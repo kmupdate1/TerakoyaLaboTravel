@@ -14,6 +14,7 @@ COPY gradlew .
 COPY gradle/libs.versions.toml gradle/libs.versions.toml
 COPY gradle/wrapper/gradle-wrapper.jar gradle/wrapper/
 COPY gradle/wrapper/gradle-wrapper.properties gradle/wrapper/
+COPY buildSrc/ buildSrc/
 
 # 依存関係をダウンロードしてキャッシュ
 # これにより、ソースコードが変更されても依存関係の再ダウンロードが不要になることが多い
