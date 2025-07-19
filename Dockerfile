@@ -11,7 +11,7 @@ COPY settings.gradle.kts .
 COPY build.gradle.kts .
 COPY gradle.properties .
 COPY gradlew .
-COPY gradle/wrapper/gradle-wrapper.jar gradle/wrapper
+COPY gradle/wrapper/gradle-wrapper.jar gradle/wrapper/
 COPY gradle/wrapper/gradle-wrapper.properties gradle/wrapper/
 
 # 依存関係をダウンロードしてキャッシュ
