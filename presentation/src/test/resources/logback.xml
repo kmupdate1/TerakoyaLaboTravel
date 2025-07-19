@@ -41,7 +41,7 @@
         <appender-ref ref="FILE" />
     </root>
 
-    <logger name="jp.lax256" level="TRACE" additivity="false">
+    <logger name="jp.terakoyalabo" level="TRACE" additivity="false">
         <appender-ref ref="STUDIO" />
         <appender-ref ref="FILE" />
     </logger>
