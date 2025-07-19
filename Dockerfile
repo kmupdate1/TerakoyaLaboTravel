@@ -28,7 +28,7 @@ COPY shared shared/
 # Ktorアプリケーションをビルドし、単一のJARファイルを作成
 # build.gradle.kts に shadowJar プラグインが設定されていることを前提とします
 # 例: id("com.github.johnrengelman.shadow") version "8.1.1"
-RUN gradle :presentation:shadowJar
+RUN gradlew :presentation:shadowJar
 
 # --- ステージ2: 実行ステージ ---
 # より軽量なJREのみのイメージを使用
