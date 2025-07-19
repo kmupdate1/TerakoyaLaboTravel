@@ -7,18 +7,18 @@ import io.ktor.server.routing.*
 
 fun Application.configureRouting() {
     routing {
-        route("api") {
-            route("v1") {
-                route("travel") {
+        route("/api") {
+            route("/v1") {
+                route("/travel") {
                     // graphQLPostRoute()
                 }
             }
         }
-        route("v1") {
-            route("terakoyalabo-travel") {
+        route("/v1") {
+            route("/terakoyalabo-travel") {
                 get { call.respondText { "Hello this is TERAKOYALABO TRAVEL." } }
 
-                route("api.json") {
+                route("/api.json") {
                     openApi()
                 }
             }
