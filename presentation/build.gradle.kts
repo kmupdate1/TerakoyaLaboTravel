@@ -15,6 +15,8 @@ dependencies {
     implementation(Dependencies.Ktor.Server.CORE)
     implementation(Dependencies.Ktor.Server.CIO)
     implementation(Dependencies.Ktor.Server.STATUS_PAGES)
+    implementation(Dependencies.Ktor.Server.OPENAPI)
+    implementation(Dependencies.Ktor.Server.SWAGGER)
 
     implementation(Dependencies.GraphQL.Kotlin.KTOR_SERVER)
 
@@ -23,6 +25,9 @@ dependencies {
     implementation(Dependencies.Koin.LOGGER_SLF4J)
 
     implementation(Dependencies.Logback.CLASSIC)
+
+    implementation(Dependencies.Smiley4.KTOR_OPENAPI)
+    implementation(Dependencies.Smiley4.KTOR_SWAGGER_UI)
 
     implementation(project(Projects.DOMAIN))
     implementation(project(Projects.APPLICATION))

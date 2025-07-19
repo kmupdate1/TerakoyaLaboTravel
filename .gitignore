@@ -43,3 +43,7 @@ bin/
 
 ### Logs ###
 logs/
+
+### Specifications ###
+api.json
+api.yaml
