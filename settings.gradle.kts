@@ -5,7 +5,7 @@ include(":shared:common") // monitoring etc...
 include(":shared:event")
 
 // Travel API Service Specific
-include(":domain")
+include(":common")
 include(":presentation")
 include(":application")
 include(":infrastructure")

@@ -5,5 +5,5 @@ plugins {
 dependencies {
     implementation(Dependencies.GraphQL.Kotlin.KTOR_SERVER)
 
-    implementation(project(Projects.DOMAIN))
+    implementation(project(Projects.COMMON))
 }

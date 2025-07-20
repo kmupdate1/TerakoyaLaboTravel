@@ -4,7 +4,7 @@ object Projects {
         const val EVENT = ":shared:event"
     }
 
-    const val DOMAIN = ":domain"
+    const val COMMON = ":common"
     const val PRESENTATION = ":presentation"
     const val APPLICATION = ":application"
     const val INFRASTRUCTURE = ":infrastructure"

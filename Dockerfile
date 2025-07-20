@@ -24,7 +24,7 @@ RUN gradle dependencies
 COPY presentation presentation/
 COPY application application/
 COPY infrastructure infrastructure/
-COPY domain domain/
+COPY common common/
 COPY shared shared/
 
 # Ktorアプリケーションをビルドし、単一のJARファイルを作成

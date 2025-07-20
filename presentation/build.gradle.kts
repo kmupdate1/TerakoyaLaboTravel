@@ -26,7 +26,7 @@ dependencies {
 
     implementation(Dependencies.Logback.CLASSIC)
 
-    implementation(project(Projects.DOMAIN))
+    implementation(project(Projects.COMMON))
     implementation(project(Projects.APPLICATION))
     implementation(project(Projects.INFRASTRUCTURE))
 }
