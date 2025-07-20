@@ -26,9 +26,6 @@ dependencies {
 
     implementation(Dependencies.Logback.CLASSIC)
 
-    implementation(Dependencies.Smiley4.KTOR_OPENAPI)
-    implementation(Dependencies.Smiley4.KTOR_SWAGGER_UI)
-
     implementation(project(Projects.DOMAIN))
     implementation(project(Projects.APPLICATION))
     implementation(project(Projects.INFRASTRUCTURE))
