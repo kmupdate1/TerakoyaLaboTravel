@@ -1,6 +1,16 @@
 # --- ステージ1: ビルドステージ ---
 # KotlinとGradleのビルド環境を持つイメージを使用
-FROM gradle:8.14 AS builder
+FROM gradle:8.13-jdk-21-and-24 AS builder
+
+# curl と unzip をインストール
+RUN apt-get update && apt-get install -y curl unzip && rm -rf /var/lib/apt/lists/*
+
+# Gradle インストール（zip ダウンロード & 展開）
+ENV GRADLE_VERSION=8.13
+RUN curl -sSLo gradle.zip https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip \
+    && unzip gradle.zip -d /opt \
+    && rm gradle.zip
+ENV PATH="/opt/gradle-${GRADLE_VERSION}/bin:${PATH}"
 
 # 作業ディレクトリを設定
 WORKDIR /app
@@ -34,7 +44,7 @@ RUN ./gradlew :presentation:shadowJar
 
 # --- ステージ2: 実行ステージ ---
 # より軽量なJREのみのイメージを使用
-FROM eclipse-temurin:21-jre-jammy
+FROM eclipse-temurin:21-jdk
 
 # 環境変数でポートを設定（Cloud Runは通常8080ポートを期待します）
 ENV PORT 8080
